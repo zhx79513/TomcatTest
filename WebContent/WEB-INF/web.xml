@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5"
+>
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.runoob.test.LoginFilter</filter-class>
+		<init-param>
+			<param-name>Site</param-name>
+			<param-value>过滤器教程</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>com.runoob.test.HelloServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DisplayHeader</servlet-name>
+		<servlet-class>com.runoob.test.DisplayHeader</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.runoob.test.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/TomcatTest/HelloServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayHeader</servlet-name>
+		<url-pattern>/TomcatTest/DisplayHeader</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/TomcatTest/UploadServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
