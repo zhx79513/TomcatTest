@@ -1,5 +1,6 @@
 <%@page import="java.net.URLEncoder"%>
 <%@page import="javax.servlet.http.*"%>
+<%@ page import="java.nio.charset.StandardCharsets" %>
 <%@ page
 	language="java"
 	contentType="text/html; charset=UTF-8"
@@ -10,7 +11,7 @@
 	// 对中文值编码，防止出现乱码
 	request.setCharacterEncoding("utf-8");
 
-	Cookie nameCookie = new Cookie("name", URLEncoder.encode(request.getParameter("name"), "utf-8"));
+	Cookie nameCookie = new Cookie("name", URLEncoder.encode(request.getParameter("name"), StandardCharsets.UTF_8));
 	Cookie urlCookie = new Cookie("url", request.getParameter("url"));
 
 	nameCookie.setMaxAge(60 * 60);

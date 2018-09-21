@@ -27,7 +27,7 @@ public class HelloServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// TODO Auto-generated method stub
 		response.setCharacterEncoding("GBK");
 		response.getWriter().write("菜鸟教程: http://www.runoob.com");

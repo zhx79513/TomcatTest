@@ -50,7 +50,7 @@ public class LoginFilter implements Filter {
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
-	public void init(FilterConfig fConfig) throws ServletException {
+	public void init(FilterConfig fConfig) {
 		String site = fConfig.getInitParameter("Site");
 		
 		// 控制台打印网站名称

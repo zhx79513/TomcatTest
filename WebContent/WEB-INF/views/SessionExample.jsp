@@ -12,10 +12,10 @@
 	session.setMaxInactiveInterval(60);
 	
 	// session值
-	Integer visitCount = new Integer(0);
-	String visitCountKey = new String("visitCount");
-	String userIdKey = new String("userId");
-	String userId = new String("ABCDFE");
+	Integer visitCount = 0;
+	String visitCountKey = "visitCount";
+	String userIdKey = "userId";
+	String userId = "ABCDFE";
 	
 	String title;
 	
